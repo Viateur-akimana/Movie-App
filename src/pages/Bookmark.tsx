@@ -1,14 +1,8 @@
-import React, { useState, SetStateAction, useContext } from "react";
+import React, { useState, useContext } from "react";
 import Layout from "../components/Layout";
-import {
-  Box,
-  Paper,
-  InputBase,
-  InputAdornment,
-  Typography,
-} from "@mui/material";
-import SearchIcon from "../components/icons/series-icon";
-import MovieList from "../components/icons/movie-icon";
+import { Box, Paper, InputBase, InputAdornment, Typography } from "@mui/material";
+import SearchIcon from "../components/icons/series-icon"; // Assuming SearchIcon is correctly imported
+import MovieList from "../components/MovieList"; // Assuming MovieList is imported correctly
 import { MovieDataType } from "../assets/data";
 import { MovieContext } from "../movie-context";
 
@@ -18,13 +12,16 @@ const Bookmark = () => {
   const { state } = useContext(MovieContext);
   const { movies } = state;
   const bookmarks = movies.filter((movie) => movie.isBookmarked);
-  const handleSearch = (e: { target: { value: SetStateAction<string> } }) => {
-    setSearch(e.target.value);
+
+  const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { value } = e.target;
+    setSearch(value);
     const newList = movies.filter((movie) =>
-      movie.title.toLowerCase().includes(search.toLowerCase())
+      movie.title.toLowerCase().includes(value.toLowerCase())
     );
     setSearchList(newList);
   };
+
   return (
     <Layout>
       <Box>
@@ -51,13 +48,7 @@ const Bookmark = () => {
             onChange={handleSearch}
             startAdornment={
               <InputAdornment position="start">
-                <img
-                  src={SearchIcon}
-                  alt="search icon"
-                  width={20}
-                  height={20}
-                />
-                
+                <SearchIcon />
               </InputAdornment>
             }
           />
@@ -74,13 +65,13 @@ const Bookmark = () => {
         ) : (
           <Box width="100%">
             <Typography>
-              Found {searchList.length} results for "{search}"{""}
+              Found {searchList.length} results for "{search}"
             </Typography>
-              <MovieList recommendList={searchList} />
-            </Box>
-          )}
-        </Box>
-      </Layout>
+            <MovieList recommendList={searchList} />
+          </Box>
+        )}
+      </Box>
+    </Layout>
   );
 };
 
