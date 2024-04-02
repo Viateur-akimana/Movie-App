@@ -1,5 +1,5 @@
 import React, { useState, SetStateAction, useContext } from "react";
-import Layout from "../../Layout";
+import Layout from "../components/Layout";
 import {
   Box,
   Paper,
@@ -7,10 +7,10 @@ import {
   InputAdornment,
   Typography,
 } from "@mui/material";
-import SearchIcon from "../../assets/icons/icon-search.svg";
-import MovieList from "../../components/movie-list";
-import { MovieDataType } from "../../assets/data";
-import { MovieContext } from "../../context/movie-context";
+import SearchIcon from "../components/icons/series-icon";
+import MovieList from "../components/icons/movie-icon";
+import { MovieDataType } from "../assets/data";
+import { MovieContext } from "../movie-context";
 
 const Bookmark = () => {
   const [search, setSearch] = useState("");
