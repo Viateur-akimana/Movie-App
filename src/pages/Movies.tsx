@@ -7,7 +7,7 @@ import {
   InputAdornment,
   Typography,
 } from "@mui/material";
-import SearchIcon from "../components/icons/icon/assets/icons/icon-search.svg";
+import SearchIcon from "../assets/icons/icon-search.svg";
 import MovieList from "../components/MovieList";
 import { MovieDataType } from "../assets/data";
 import { MovieContext } from "../movie-context";

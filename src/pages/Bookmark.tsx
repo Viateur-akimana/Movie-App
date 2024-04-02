@@ -57,6 +57,7 @@ const Bookmark = () => {
                   width={20}
                   height={20}
                 />
+                
               </InputAdornment>
             }
           />
@@ -75,11 +76,11 @@ const Bookmark = () => {
             <Typography>
               Found {searchList.length} results for "{search}"{""}
             </Typography>
-            <MovieList recommendList={searchList} />
-          </Box>
-        )}
-      </Box>
-    </Layout>
+              <MovieList recommendList={searchList} />
+            </Box>
+          )}
+        </Box>
+      </Layout>
   );
 };
 
