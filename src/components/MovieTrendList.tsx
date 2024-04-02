@@ -1,7 +1,7 @@
 import { Box, Grid, Paper } from "@mui/material";
 import React from "react";
 import { MovieDataType } from "../assets/data";
-import MovieTrendCard from "../movie-card/movieTrend";
+import MovieTrendCard from "./MovieTrendCard";
 
 interface MovieTrendListProps {
   trendingList: MovieDataType[];

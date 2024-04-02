@@ -1,12 +1,11 @@
 import React, { useContext } from "react";
-import { MovieDataType } from "../../assets/data";
-import { MovieContext } from "../../context/movie-context";
+import { MovieDataType } from "../assets/data";
+import { MovieContext } from "../movie-context";
 import { Box, Card, CardContent, Typography, Grid } from "@mui/material";
-import moviesIcon from "../../assets/icons/icon-category-movie.svg";
-import tvSeriesIcon from "../../assets/icons/icon-category-tv.svg";
-import BookmarkIcon from "../icons/bookmark-icon";
-import BookmarkEmptyIcon from "../icons/bookmark-empy-icon";
-
+import moviesIcon from "../assets/icons/icon-category-movie.svg";
+import tvSeriesIcon from "../assets/icons/icon-category-tv.svg";
+import BookmarkIcon from "./icons/bookmark-icon";
+import BookmarkEmptyIcon from "./icons/bookmark-empty-icon";
 interface MovieCardProps {
   movie: MovieDataType;
 }
