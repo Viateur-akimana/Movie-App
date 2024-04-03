@@ -1,8 +1,8 @@
 import React, { useState, useContext } from "react";
 import Layout from "../components/Layout";
 import { Box, Paper, InputBase, InputAdornment, Typography } from "@mui/material";
-import SearchIcon from "../components/icons/series-icon"; // Assuming SearchIcon is correctly imported
-import MovieList from "../components/MovieList"; // Assuming MovieList is imported correctly
+import SearchIcon from "../components/icons/series-icon"; 
+import MovieList from "../components/MovieList"; 
 import { MovieDataType } from "../assets/data";
 import { MovieContext } from "../movie-context";
 
