@@ -1,12 +1,10 @@
-import { Link,useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { Box, Hidden, Typography } from "@mui/material";
 import HomeIcon from "./icons/home-icon";
-
 import MovieIcon from "./icons/movie-icon";
-
 import BookmarkIcon from "./icons/bookmark-icon";
-
 import TvSeriesIcon from "./icons/series-icon";
+
 const navLinks = [
   {
     name: "Home",
@@ -32,7 +30,7 @@ const navLinks = [
 
 const Sidebar = () => {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const {pathname}= useLocation()
+  const { pathname } = useLocation();
 
   return (
     <Box
@@ -103,8 +101,8 @@ const Sidebar = () => {
                 sx={{
                   display: "flex",
                   alignItems: "center",
+                  color: "white", // Change color to white
                   gap: 2,
-                  color: "white",
                   textDecoration: "none",
                 }}
               >
