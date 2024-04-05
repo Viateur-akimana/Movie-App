@@ -1,4 +1,4 @@
-import { Link, useLocation } from "react-router-dom";
+import { Link,useLocation } from "react-router-dom";
 import { Box, Hidden, Typography } from "@mui/material";
 import HomeIcon from "./icons/home-icon";
 
@@ -31,7 +31,8 @@ const navLinks = [
 ];
 
 const Sidebar = () => {
-  const { pathname } = useLocation();
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const {pathname}= useLocation()
 
   return (
     <Box
@@ -75,7 +76,7 @@ const Sidebar = () => {
             fontWeight={400}
             fontSize={18}
           >
-            PikaShowApp
+            Movie-app
           </Typography>
         </Hidden>
         <Box
