@@ -76,7 +76,7 @@ const Home = () => {
             </Box>
             <Box width="100%">
               <Typography variant="h5" component="h1" my={6} fontWeight={400}>
-                Recommended For You
+                Recommended For Your
               </Typography>
               <MovieList recommendList={recommendList} />
             </Box>
